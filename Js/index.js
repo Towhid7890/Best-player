@@ -5,36 +5,27 @@ document
     const nodeList = document.querySelectorAll("ol li");
     const nodeLength = nodeList.length;
     const playerBudget = document.getElementById("perplayer-ammount").value;
+    if (typeof playerBudget !== "number" || playerBudget < 0) {
+      return alert("Please enter a Positive Number value");
+    }
     const playerBudgetValue = parseFloat(playerBudget);
     const playerExpenses = document.getElementById("player-expenses");
     const expenses = nodeLength * playerBudgetValue;
     playerExpenses.innerText = expenses;
   });
-// select player show in five section
-document.getElementById("select").addEventListener("click", function () {
-  addPlayer("sakib");
-  document.getElementById("select").classList.add("disabled");
-});
-document.getElementById("select2").addEventListener("click", function () {
-  addPlayer("tamim");
-  document.getElementById("select2").classList.add("disabled");
-});
-document.getElementById("select3").addEventListener("click", function () {
-  addPlayer("masrafi");
-  document.getElementById("select3").classList.add("disabled");
-});
-document.getElementById("select4").addEventListener("click", function () {
-  addPlayer("musfiq");
-  document.getElementById("select4").classList.add("disabled");
-});
-document.getElementById("select5").addEventListener("click", function () {
-  addPlayer("taskin");
-  document.getElementById("select5").classList.add("disabled");
-});
-document.getElementById("select6").addEventListener("click", function () {
-  addPlayer("anamul");
-  document.getElementById("select6").classList.add("disabled");
-});
+
+function addListener(name, id) {
+  document.getElementById(id).addEventListener("click", function () {
+    addPlayer(name);
+    document.getElementById(id).classList.add("disabled");
+  });
+}
+addListener("sakib", "select");
+addListener("tamim", "select2");
+addListener("masrafi", "select3");
+addListener("musfiq", "select4");
+addListener("taskin", "select5");
+addListener("anamul", "select6");
 
 // function for calculate total
 
