@@ -24,3 +24,12 @@ h1 {
 .card img {
     height: 250px;
 }
+
+.player-list {
+    border: 3px solid white;
+
+}
+
+.budget-list {
+    border: 3px solid whitesmoke;
+}
