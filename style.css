@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 h1 {
     font-size: 45px;
 }
@@ -15,4 +19,8 @@ h1 {
 
 .carousel-caption {
     transform: translateY(-50%);
+}
+
+.card img {
+    height: 250px;
 }
