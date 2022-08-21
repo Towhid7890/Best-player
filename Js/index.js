@@ -35,3 +35,19 @@ document.getElementById("select6").addEventListener("click", function () {
   addPlayer("anamul");
   document.getElementById("select6").classList.add("disabled");
 });
+
+// function for calculate total
+
+document
+  .getElementById("calculate-total")
+  .addEventListener("click", function () {
+    const managerInput = document.getElementById("manager-input").value;
+    const managerValue = parseInt(managerInput);
+    const coachInput = document.getElementById("coach-input").value;
+    const coachValue = parseInt(coachInput);
+    const playerExpenses = document.getElementById("player-expenses").innerText;
+    const playerExpensesValue = parseInt(playerExpenses);
+    const finalTotal = document.getElementById("total-final");
+    const total = managerValue + coachValue + playerExpensesValue;
+    finalTotal.innerText = total;
+  });
