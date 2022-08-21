@@ -92,8 +92,8 @@
                                 <div class="card">
                                     <img src="./img/sakib.jpg" class="card-img-top" alt="...">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title">Sakib Al Hasan</h5>
-                                        <button class="btn w-100 btn-primary">Select</button>
+                                        <h5 id="sakib" class="card-title">Sakib Al Hasan</h5>
+                                        <button id="select" class="btn w-100 btn-primary">Select</button>
                                     </div>
                                 </div>
                             </div>
@@ -101,8 +101,8 @@
                                 <div class="card">
                                     <img src="./img/Tamim.jpg" class="card-img-top" alt="...">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title">Tamim Iqbal</h5>
-                                        <button class="btn w-100 btn-primary">Select</button>
+                                        <h5 id="tamim" class="card-title">Tamim Iqbal</h5>
+                                        <button id="select2" class="btn w-100 btn-primary">Select</button>
                                     </div>
                                 </div>
                             </div>
@@ -110,8 +110,8 @@
                                 <div class="card">
                                     <img src="./img/masrafi.jpg" class="card-img-top" alt="...">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title">Masrafi Bin Mortaza</h5>
-                                        <button class="btn w-100 btn-primary">Select</button>
+                                        <h5 id="masrafi" class="card-title">Masrafi Bin Mortaza</h5>
+                                        <button id="select3" class="btn w-100 btn-primary">Select</button>
                                     </div>
                                 </div>
                             </div>
@@ -121,8 +121,8 @@
                                 <div class="card">
                                     <img src="./img/musfiq.jpeg" class="card-img-top" alt="...">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title">Musfiqur Rahim</h5>
-                                        <button class="btn w-100 btn-primary">Select</button>
+                                        <h5 id="musfiq" class="card-title">Musfiqur Rahim</h5>
+                                        <button id="select4" class="btn w-100 btn-primary">Select</button>
                                     </div>
                                 </div>
                             </div>
@@ -130,8 +130,8 @@
                                 <div class="card">
                                     <img src="./img/Taskin-Ahmed.jpg" class="card-img-top" alt="...">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title">Taskin Ahmed</h5>
-                                        <button class="btn w-100 btn-primary">Select</button>
+                                        <h5 id="taskin" class="card-title">Taskin Ahmed</h5>
+                                        <button id="select5" class="btn w-100 btn-primary">Select</button>
                                     </div>
                                 </div>
                             </div>
@@ -139,8 +139,8 @@
                                 <div class="card">
                                     <img src="./img/anamul.jpg" class="card-img-top" alt="...">
                                     <div class="card-body text-center">
-                                        <h5 class="card-title">Anamul Haque</h5>
-                                        <button class="btn w-100 btn-primary">Select</button>
+                                        <h5 id="anamul" class="card-title">Anamul Haque</h5>
+                                        <button id="select6" class="btn w-100 btn-primary">Select</button>
                                     </div>
                                 </div>
                             </div>
@@ -149,19 +149,24 @@
                     <div class="col-lg-3">
                         <div>
                             <div class="player-list mb-5">
-                                <h2 class="text-light text-center">Selected Five</h2>
+                                <h3 class="text-light text-center">Selected Five</h3>
+                                <div>
+                                    <ol id="select-five" class="text-light select-five">
+
+                                    </ol>
+                                </div>
                             </div>
                             <div class="budget-list p-2">
-                                <h2 class="text-center text-light">Budget</h2>
+                                <h3 class="text-center text-light">Budget</h3>
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text font-weight-bold" id="inputGroup-sizing-sm">Per
                                         Player</span>
-                                    <input type="text" class="form-control" aria-label="Sizing example input"
-                                        aria-describedby="inputGroup-sizing-sm">
+                                    <input id="perplayer-ammount" type="text" class="form-control"
+                                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                                 </div>
-                                <button
+                                <button id="budget-calculate"
                                     class="btn btn-primary w-100 text-light mb-3 font-weight-bold">Calculate</button>
-                                <h5 class="text-light">Player Expenses: $<span> 00</span> </h5>
+                                <h5 class="text-light">Player Expenses: $<span id="player-expenses"> 00</span> </h5>
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text font-weight-bold" id="inputGroup-sizing-sm">
                                         Manager</span>
@@ -189,6 +194,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="./Js/index.js"></script>
+    <script src="./Js/common.js"></script>
 </body>
 
 </html>
