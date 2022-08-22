@@ -6,8 +6,8 @@ function addPlayer(playerName) {
   } else if (nodeLength <= 5) {
     const ol = document.getElementById("select-five");
     const li = document.createElement("li");
-    const sakib = document.getElementById(playerName).innerText;
-    li.innerText = sakib;
+    const user = document.getElementById(playerName).innerText;
+    li.innerText = user;
     ol.appendChild(li);
   }
 }

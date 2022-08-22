@@ -5,14 +5,17 @@ document
     const nodeList = document.querySelectorAll("ol li");
     const nodeLength = nodeList.length;
     const playerBudget = document.getElementById("perplayer-ammount").value;
-    if (typeof playerBudget !== "number" || playerBudget < 0) {
-      return alert("Please enter a Positive Number value");
+    const playerBudgetValue = parseInt(playerBudget);
+    if (playerBudgetValue < 0) {
+      return alert("Give positive value please");
     }
-    const playerBudgetValue = parseFloat(playerBudget);
     const playerExpenses = document.getElementById("player-expenses");
     const expenses = nodeLength * playerBudgetValue;
     playerExpenses.innerText = expenses;
+    console.log(expenses);
   });
+
+//function for add click for select  player
 
 function addListener(name, id) {
   document.getElementById(id).addEventListener("click", function () {
@@ -20,12 +23,15 @@ function addListener(name, id) {
     document.getElementById(id).classList.add("disabled");
   });
 }
+// call function from common function
 addListener("sakib", "select");
 addListener("tamim", "select2");
 addListener("masrafi", "select3");
 addListener("musfiq", "select4");
 addListener("taskin", "select5");
 addListener("anamul", "select6");
+addListener("mahmud", "select8");
+addListener("mehedi", "select9");
 
 // function for calculate total
 
@@ -39,6 +45,9 @@ document
     const playerExpenses = document.getElementById("player-expenses").innerText;
     const playerExpensesValue = parseInt(playerExpenses);
     const finalTotal = document.getElementById("total-final");
+    if (managerValue < 0 || coachValue < 0 || playerExpensesValue < 0) {
+      return alert("Please enter a positive value");
+    }
     const total = managerValue + coachValue + playerExpensesValue;
     finalTotal.innerText = total;
   });
